@@ -1,0 +1,20 @@
+name: SellWorth
+version: '${project.version}'
+main: dev.sellworth.SellWorthPlugin
+api-version: '1.21'
+depend: [Vault, ProtocolLib]
+description: /sell GUI, /worth GUI and worth lore on every item.
+commands:
+  sell:
+    description: Open the sell GUI
+  sellhistory:
+    description: View your sell history
+  worth:
+    description: Check the worth of items
+    usage: /worth [item name]
+  sellreload:
+    description: Reload prices.yml
+    permission: sellworth.reload
+permissions:
+  sellworth.reload:
+    default: op
